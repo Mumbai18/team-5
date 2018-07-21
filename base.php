@@ -21,35 +21,51 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'music:index' %}">Annadhan</a>
+            <a class="navbar-brand" href="#">Annadhan</a>
         </div>
 
         <!--Items-->
         <div class="collapse navbar-collapse " id="topNavBar">
             <ul class=" nav navbar-nav">
                 <li class="active">
-                    <a href="{% url 'music:index' %}">
-                        <span  class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> Donate
+                    <a href="#",  style="color:gray">
+                        <span  class="glyphicon glyphicon-cutlery" aria-hidden="true" style="color:white"></span> Donate
                     </a>
                 </li>
                 <li class="">
                     <a href="#">
-                        <span  class="glyphicon glyphicon-star" aria-hidden="true"></span> Volunteer
+                        <span  class="glyphicon glyphicon-star" aria-hidden="true" style="color:white"></span> Volunteer
                     </a>
                 </li>
                  <li class="">
                     <a href="#">
-                        <span  class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Contact Us
+                        <span  class="glyphicon glyphicon-asterisk" aria-hidden="true" style="color:white"></span> Contact Us
                     </a>
                 </li>
             </ul>
 
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="#">
+                        <span  class="glyphicon glyphicon-log-out" aria-hidden="true" style="color:white"></span> Logout
+                    </a>
+                </li>
+
+            </ul>
             
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="#">
+                        <span  class="glyphicon glyphicon-log-in" aria-hidden="true" style="color:white"></span> Login
+                    </a>
+                </li>
+
+            </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="">
                     <a href="#">
-                        <span  class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout
+                        <span  class="glyphicon glyphicon-pencil" aria-hidden="true" style="color:white"></span> Register
                     </a>
                 </li>
 
