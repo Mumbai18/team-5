@@ -78,7 +78,7 @@ input[type="submit"],a,.agileinfo_social_icons li{
     font-size: 16px;
 }
 .w3layouts_copy_right p a{
-	color:#cd31c1;
+	color:green;
 	text-decoration:none;
 }
 .w3layouts_copy_right p a:hover{
@@ -181,7 +181,7 @@ input[type="submit"],a,.agileinfo_social_icons li{
     text-transform: capitalize;
 }
 .w3_main_grid_left a:hover{
-	color:#FF0F75;
+	color:green;
 }
 .w3_main_grid_right input[type="submit"]{
 	outline:none;
@@ -190,16 +190,16 @@ input[type="submit"],a,.agileinfo_social_icons li{
 	text-transform:uppercase;
 	font-size:14px;
 	color:#fff;
-	background:#cd31c1;
+	background:green;
 	border:none;
 	cursor:pointer;
 }
 .w3_main_grid_right input[type="submit"]:hover{
-	background:#df49d3;
+	background:green;
 }
 /*-- radio button --*/
 span {
-    color: #cd31c1;
+    color: green;
 }
 .grid-w3layouts1 ul li,.grid-w3layouts2 ul li{
 	color: #fff;
@@ -257,13 +257,13 @@ ul li .check::before {
     -webkit-transition: background 0.25s linear;
 }
 input[type=radio]:checked ~ .check {
-	border: 2px solid #cd31c1;
+	border: 2px solid green;
 }
 input[type=radio]:checked ~ .check::before{
-	background: #cd31c1;
+	background: green;
 }
 input[type=radio]:checked ~ label{
-	color: #cd31c1;
+	color: green;
 }
 /*-- /radio button --*/
 .form-w3ls {

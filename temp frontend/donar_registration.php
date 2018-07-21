@@ -89,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="w3_main_grid">
 						<div class="w3_main_grid_right">
-							<input type="submit" value="Submit">
+							<input type="submit" value="Submit", style="background-color:green">
 						</div>
 					</div>
 				</form>
