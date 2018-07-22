@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.example.android.cfgprepapp.adapter.DrawerAdapter;
 
+import com.example.android.cfgprepapp.fragment.ContactFragment;
 import com.example.android.cfgprepapp.fragment.EventFragment;
 import com.example.android.cfgprepapp.fragment.MainForumFragment;
 import com.example.android.cfgprepapp.fragment.TabsFragment;
@@ -247,15 +248,15 @@ public class MainActivity extends AppCompatActivity {
 				DrawerItem.DRAWER_ITEM_TAG_SEARCH_BARS));
 		mDrawerItems.add(new DrawerItem(R.string.drawer_icon_text_views,
 				R.string.drawer_title_text_views,
-				DrawerItem.DRAWER_ITEM_TAG_TEXT_VIEWS));
-		mDrawerItems.add(new DrawerItem(R.string.drawer_icon_dialogs,
-				R.string.drawer_title_dialogs,
-				DrawerItem.DRAWER_ITEM_TAG_DIALOGS));*/
+				DrawerItem.DRAWER_ITEM_TAG_TEXT_VIEWS));*/
 		mDrawerItems.add(new DrawerItem(R.string.drawer_icon_tabs,
 				R.string.drawer_title_tabs,
 				DrawerItem.DRAWER_ITEM_TAG_TABS));
 		mDrawerItems.add(new DrawerItem(R.string.drawer_icon_wizards, R.string.drawer_title_wizards,
 				DrawerItem.DRAWER_ITEM_TAG_WIZARDS));
+		mDrawerItems.add(new DrawerItem(R.string.drawer_icon_dialogs,
+				R.string.drawer_title_dialogs,
+				DrawerItem.DRAWER_ITEM_TAG_DIALOGS));
 	}
 
 
@@ -365,9 +366,9 @@ public class MainActivity extends AppCompatActivity {
 			fragment = CheckAndRadioBoxesFragment.newInstance();
 		} else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_LEFT_MENUS) {
 			fragment = LeftMenusFragment.newInstance();
-		} else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_LIST_VIEWS) {
-			fragment = ListViewsFragment.newInstance();
-		} else */if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_PARALLAX) {
+		} else */if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_DIALOGS) {
+			fragment = ContactFragment.newInstance();
+		} else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_PARALLAX) {
 			fragment = EventFragment.newInstance();
 		} else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_WIZARDS) {
 			fragment = MainForumFragment.newInstance();

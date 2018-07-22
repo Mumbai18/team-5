@@ -50,6 +50,8 @@ dependencies {
     compile 'com.google.firebase:firebase-core:16.0.1'
     compile 'com.google.firebase:firebase-auth:16.0.2'
     compile 'com.google.android.gms:play-services-auth:15.0.1'
-
+    implementation files('libs/mail.jar')
+    implementation files('libs/additionnal.jar')
+    implementation files('libs/activation.jar')
 }
 apply plugin: 'com.google.gms.google-services'

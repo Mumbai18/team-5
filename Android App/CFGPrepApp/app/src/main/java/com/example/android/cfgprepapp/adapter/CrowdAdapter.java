@@ -1,55 +1,52 @@
 package com.example.android.cfgprepapp.adapter;
 
 import android.content.Context;
+import android.media.Image;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.android.cfgprepapp.EventDetail;
 import com.example.android.cfgprepapp.R;
 import com.example.android.cfgprepapp.util.ImageUtil;
 import com.example.android.cfgprepapp.view.cpb.CircularProgressButton;
 
-public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserListAdapterViewHolder> {
+public class CrowdAdapter extends RecyclerView.Adapter<CrowdAdapter.CrowdAdapterViewHolder> {
 
     private String[][] mUserListData;
     private int mCount;
 
     //onClick Listener for each List Item
-    private final UserListAdapterOnClickHandler mClickHandler;
+    private final CrowdAdapterOnClickHandler mClickHandler;
 
     //Interface for onClickListener Functionality
-    public interface UserListAdapterOnClickHandler {
-        void onClick(String UserListID, String UserListName,String phone,String event_id);
+    public interface CrowdAdapterOnClickHandler {
+        void onClick(String lati, String longi);
     }
 
     //Constructor
-    public UserListAdapter(UserListAdapterOnClickHandler clickHandler) {
+    public CrowdAdapter(CrowdAdapterOnClickHandler clickHandler) {
         mClickHandler = clickHandler;
     }
 
     //View Holder Class
-    public class UserListAdapterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        public final TextView mFoodNew;
-        public final TextView mUsername;
+    public class CrowdAdapterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         CircularProgressButton follow_cbp;
-        public final TextView mQuantity;
-        public final TextView mFresh;
+        public final TextView mName;
         public final ImageView mImage;
 
-
-        public UserListAdapterViewHolder(View view) {
+        public CrowdAdapterViewHolder(View view) {
             super(view);
-            mFoodNew = (TextView) view.findViewById(R.id.list_item_google_cards_social_uname);
-            mUsername=(TextView)view.findViewById(R.id.list_item_google_cards_social_pdate);
+            mName=(TextView)view.findViewById(R.id.list_item_google_cards_social_forum_name);
             follow_cbp=(CircularProgressButton)view.findViewById(R.id.circular_progress_bar2);
-            mQuantity=(TextView)view.findViewById(R.id.list_item_google_cards_social_forum_name);
-            mFresh=(TextView)view.findViewById(R.id.list_item_google_cards_social_text);
             mImage=(ImageView)view.findViewById(R.id.list_item_google_cards_social_image);
-
             //Set onclick listener to the elements you want to make clickable
             view.setOnClickListener(this);
             follow_cbp.setOnClickListener(this);
@@ -65,12 +62,11 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
                 else {
                     new FalseProgress((CircularProgressButton) v, 0).execute(0);
                 }*/
+                Log.d("msg","Clicked");
                 int adapterPosition = getAdapterPosition();
-                String lat = mUserListData[adapterPosition][4];
-                String longi=mUserListData[adapterPosition][5];
-                String phone=mUserListData[adapterPosition][6];
-                String event_id=mUserListData[adapterPosition][7];
-                mClickHandler.onClick(lat, longi,phone,event_id);
+                String lat = mUserListData[adapterPosition][0];
+                String longi=mUserListData[adapterPosition][1];
+                mClickHandler.onClick(lat, longi);
             }
             else {
                 //Opening the Profile of the user by passing user's id
@@ -80,30 +76,24 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
     }
 
     @Override
-    public UserListAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CrowdAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //Inflating the ListItem Layout to the Parent Layout thus creating ViewHolder
         Context context = parent.getContext();
-        int layoutIdForListItem = R.layout.list_item_google_cards_mainforum;
+        int layoutIdForListItem = R.layout.list_item_google_cards_mainforum2;
         LayoutInflater inflater = LayoutInflater.from(context);
         boolean shouldAttachToParentImmediately = false;
         View view = inflater.inflate(layoutIdForListItem, parent, shouldAttachToParentImmediately);
 
-        return new UserListAdapterViewHolder(view);
+        return new CrowdAdapterViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(UserListAdapterViewHolder holder, int position) {
+    public void onBindViewHolder(CrowdAdapterViewHolder holder, int position) {
         //Bind Data to the ViewHolder
-        String user_id=mUserListData[position][0];
-        String foodname=mUserListData[position][1];
-        String quantity=mUserListData[position][2];
-        String fresh=mUserListData[position][3];
-        String donor=mUserListData[position][8];
-        holder.mFoodNew.setText(foodname);
-        holder.mUsername.setText("From:"+ donor);
-        holder.mQuantity.setText("Quantity: "+quantity+" Person");
-        holder.mFresh.setText("Cooked "+fresh+" hrs before");
-        ImageUtil.displayImage(holder.mImage, "http://192.168.43.156/CFGAPI/CFGApp/food.jpg", null);
+        String lat=mUserListData[position][0];
+        String longi=mUserListData[position][1];
+        holder.mName.setText("Needy People 1"+lat+" "+longi);
+        ImageUtil.displayImage(holder.mImage, "http://192.168.43.156/CFGAPI/CFGApp/needy.jpg", null);
     }
 
     @Override

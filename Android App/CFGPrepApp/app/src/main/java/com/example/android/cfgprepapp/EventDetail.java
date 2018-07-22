@@ -48,7 +48,7 @@ public class EventDetail extends AppCompatActivity implements View.OnClickListen
         wv1.loadUrl(mapurl);
 
         TextView phoneNo=(TextView)findViewById(R.id.list_item_google_cards_social_forum_name);
-        phoneNo.setText("Phone No:"+phone);
+        phoneNo.setText("Donor Phone No:"+phone);
 
         Button cpb=(CircularProgressButton)findViewById(R.id.circular_progress_bar2);
         cpb.setOnClickListener(this);
@@ -157,7 +157,9 @@ public class EventDetail extends AppCompatActivity implements View.OnClickListen
                 //JSON Data
                 JSONObject Data=null;
 
-                Intent intent =new Intent(EventDetail.this, RegisterActivity.class);
+                Intent intent =new Intent(EventDetail.this, CrowdList.class);
+                intent.putExtra("lat","19.214");
+                intent.putExtra("longi","72.837");
                 startActivity(intent);
                 finish();
 

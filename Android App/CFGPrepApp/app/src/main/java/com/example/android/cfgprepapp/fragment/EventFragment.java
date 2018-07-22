@@ -32,7 +32,7 @@ import org.json.JSONObject;
  * A simple {@link Fragment} subclass.
  */
 public class EventFragment extends Fragment implements UserListAdapter.UserListAdapterOnClickHandler {
-    String [][] UserListData = new String[1000][8];
+    String [][] UserListData = new String[1000][9];
 
     private TextView mErrorMessageDisplay;
     private ProgressBar mLoadingIndicator;
@@ -144,6 +144,7 @@ public class EventFragment extends Fragment implements UserListAdapter.UserListA
                         String quantity=c.getString("quantity");
                         String fresh=c.getString("fresh");
                         String user_id=c.getString("user_id");
+                        //String donor=c.getString("donor");
                         Log.d("Msg",String.valueOf(c.getString("user_id")));
                         UserListData[i][0]=user_id;
                         UserListData[i][1]=foodname;
@@ -153,6 +154,7 @@ public class EventFragment extends Fragment implements UserListAdapter.UserListA
                         UserListData[i][5]=c.getString("longitude");
                         UserListData[i][6]=c.getString("phone");
                         UserListData[i][7]=c.getString("id");
+                        UserListData[i][8]=c.getString("donar_name");
                         Log.d("msg",fresh);
                         count++;
                     }

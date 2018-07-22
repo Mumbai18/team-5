@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.cfgprepapp.SuperMainActivity"
+    android:background="@drawable/login_travel">
+
+
+
+
+    <TextView
+        android:id="@+id/tvreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+
+        android:text="Who Are You?"
+        android:textColor="@color/main_color_grey_300"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <Button
+        android:id="@+id/btnDonor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="DONOR"
+        android:background="@color/main_color_500"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@id/guideline13"
+        app:layout_constraintRight_toRightOf="@id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline23" />
+
+
+    <Button
+        android:id="@+id/btnVolunteer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:background="@color/main_color_500"
+        android:textColor="@color/white"
+        android:inputType="textEmailAddress"
+        android:text="VOLUNTEER"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@id/guideline13"
+        app:layout_constraintRight_toRightOf="@id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.24" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.59" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.77" />
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+   <!-- <Button
+        android:id="@+id/btnAdmin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="24dp"
+        android:text="ADMIN"
+        android:background="@color/main_color_500"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toTopOf="@+id/guideline29"
+        tools:ignore="RtlCompat" />-->
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <!--<ImageView
+        android:id="@+id/imageView"
+        android:layout_width="400dp"
+        android:layout_height="87dp"
+        app:srcCompat="@drawable/annadhan1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="0dp" />
+    -->
+
+
+
+</android.support.constraint.ConstraintLayout>

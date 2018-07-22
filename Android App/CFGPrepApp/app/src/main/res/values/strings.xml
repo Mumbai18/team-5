@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CFG Preparation App</string>
+    <string name="app_name">CFG App</string>
     <string name="ipadd">192.168.43.156</string>
 
     <string name="drawer_open">Open navigation drawer</string>
@@ -42,7 +42,7 @@
     <string name="drawer_title_left_menus">Left Menus</string>
     <string name="drawer_title_list_views">List Views</string>
     <string name="drawer_title_parallax">Live Drives</string>
-    <string name="drawer_title_dialogs">Dialogs</string>
+    <string name="drawer_title_dialogs">Contact Us</string>
     <string name="drawer_title_tabs">Profile Page </string>
     <string name="drawer_title_wizards">Forums</string>
     <string name="drawer_title_linked_in">LinkedIn</string>
