@@ -1,6 +1,16 @@
 
 <?php
 include("base.php");
+
+session_start();
+
+$firstname = $_SESSION['firstname'];
+$lastname = $_SESSION['lastname'];
+$email = $_SESSION['email'] ;
+$password = $_SESSION['password'] ;
+$phone = $_SESSION['phone'];
+$address = $_SESSION['address'];
+
 ?>
 
 <!DOCTYPE html>
@@ -30,53 +40,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="main">
 			<h1 class="w3layouts_head">Registration</h1>
 				<div class="w3layouts_main_grid">
-					<form action="#" method="post" class="w3_form_post">
+					<form action="registerentry.php" method="post" class="w3_form_post">
 						<div class="w3_agileits_main_grid w3l_main_grid">
 							<span class="agileits_grid">
 								<label>First Name</label>
-								<input type="text" name="qty" placeholder="" required="">
+								<input type="text" name="firstname" placeholder="" required="">
 							</span>
 						</div>
                         
                         <div class="w3_agileits_main_grid w3l_main_grid">
 							<span class="agileits_grid">
 								<label>Last Name</label>
-								<input type="text" name="qty" placeholder="" required="">
+								<input type="text" name="lastname" placeholder="" required="">
 							</span>
 						</div>
                         
                         <div class="w3_agileits_main_grid w3l_main_grid">
 							<span class="agileits_grid">
 								<label>Email</label>
-								<input type="text" name="qty" placeholder="" required="">
+								<input type="text" name="email" placeholder="" required="">
 							</span>
 						</div>
                         
                         <div class="w3_agileits_main_grid w3l_main_grid">
 							<span class="agileits_grid">
 								<label>Create Password</label>
-								<input type="text" name="qty" placeholder="" required="">
+								<input type="password" name="password" placeholder="" required="">
 							</span>
 						</div>
                         
                         <div class="w3_agileits_main_grid w3l_main_grid">
 							<span class="agileits_grid">
 								<label>Phone</label>
-								<input type="text" name="qty" placeholder="" required="">
+								<input type="text" name="phone" placeholder="" required="">
 							</span>
-						</div>
+						</div>    
                         
-                        <div class="w3_agileits_main_grid w3l_main_grid">
-							<span class="agileits_grid">
-								<label>Phone</label>
-								<input type="text" name="qty" placeholder="" required="">
-							</span>
-						</div>
                         
                         <div class="w3_agileits_main_grid w3l_main_grid">
 							<span class="agileits_grid">
 								<label>Address</label>
-								<input type="text" name="qty" placeholder="" required="">
+								<input type="text" name="address" placeholder="" required="">
 							</span>
 						</div>
                         
